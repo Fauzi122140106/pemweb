@@ -1,14 +1,15 @@
 <?php
 class Connection {
-    private $host = '127.0.0.1'; // Default host
-    private $user = 'root'; // Default MySQL user for XAMPP
-    private $password = ''; // Default blank password for XAMPP
-    private $dbname = 'pemweb'; // Replace with your database name
+    private $host = 'junction.proxy.rlwy.net'; 
+    private $user = 'root'; 
+    private $password = 'xJkJQdfNKtEcKFLUzpLodQfjJHkAsBZs'; 
+    private $dbname = 'railway'; 
+    private $port = 57386;
     private $conn;
 
     // Constructor to initialize connection
     public function __construct() {
-        $this->conn = new mysqli($this->host, $this->user, $this->password, $this->dbname);
+        $this->conn = new mysqli($this->host, $this->user, $this->password, $this->dbname,$this->port);
 
         // Check if connection failed
         if ($this->conn->connect_error) {
